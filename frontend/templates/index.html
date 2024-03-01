@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KidGo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='wizard/favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <b>KidGo: a Safe Audio Chatting App for Kindergarteners</b>
+    <button onclick = "localStorage.clear(); window.location.href = window.location.href" id = "logout">Log out</button> <br>
+
+    
+    <hr>
+    <b id = "class">Class: Valistus International School EYFS</b>
+    
+    <h1 id="greeting"></h1> 
+
+    <div class="topbar" id = "characterpick">
+        <button class="button" onclick = "setPerson('John')">John</button>
+        <button class="button" onclick = "setPerson('Joe')">Joe</button>
+        <button class="button" onclick = "setPerson('Jill')">Jill</button>
+        <button class="button" onclick = "setPerson('Alice')">Alice</button>
+        <button class="button" onclick = "setPerson('Bob')">Bob</button>
+        <button class="button" onclick = "setPerson('Tanvi')">Tanvi</button>
+        <button class="button" onclick = "setPerson('Max')">Max</button>
+        <button class="button" onclick = "setPerson('Inaaya')">Inaaya</button>
+        <button class="button" onclick = "setPerson('Rahul')">Rahul</button>
+        <button class="button" onclick = "setPerson('Olivia')">Olivia</button>
+
+        <!-- <br><br>
+        Enter your ClassID (enter this first)
+        <br>
+        <input type="text" id = "classID"> -->
+
+        <br>
+        <br>
+        <br>
+        Click here for help! <br>
+        <audio src="{{ url_for('static', filename='wizard/login.m4a') }}" controls></audio>
+    </div>
+
+    <div class="topbar" id="chatselect"></div>
+
+    <h1 id = "sendmessageheading"></h1>
+    <div id = "sendmenu"></div>
+
+    <div id="help">
+        click here for help:
+        <audio src="{{ url_for('static', filename='wizard/wizrd_home.m4a') }}" controls></audio>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
